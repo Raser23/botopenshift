@@ -1,3 +1,18 @@
+var http=require('http');
+
+var random=require('random-number14228');
+
+var cool = require('cool-ascii-faces');
+
+var server=http.createServer(function(req,res){
+    res.writeHead(200,{'Content-Type':'text/html'});
+    res.end('<h1>'+random()+ '</h1>');
+});
+var port=Number(process.env.PORT||3000);
+server.listen(port);
+
+
+
 var TelegramBot = require('node-telegram-bot-api');
 var http = require('http');
 var answer=require('answer');

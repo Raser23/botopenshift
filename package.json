@@ -15,7 +15,9 @@
     "request": "^2.67.0",
     "urlencode": "^1.1.0",
     "utf8": "^2.1.1",
-    "socket.io": "^1.3.6"
+    "socket.io": "^1.3.6",
+    "cool-ascii-faces":"",
+     "random-number14228":""
   },
   "devDependencies": {},
   "scripts": {
