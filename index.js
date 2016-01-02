@@ -5,7 +5,7 @@ var random=require('random-number14228');
 var cool = require('cool-ascii-faces');
 
 var server=http.createServer(function(req,res){
-    console.log(req);
+    //console.log(req);
     res.writeHead(200,{'Content-Type':'text/html'});
     res.end('<h1>'+random()+ '</h1>');
 });
@@ -20,14 +20,7 @@ answer.getPhoto(sendPhotoByBot);
 answer.loadCom();
 var token = '115827379:AAFaFtX7j5pFblau-xnP35dcI8VS2Ku6o9I';
 var botOptions = {
-        http_proxy: {
-        host: 'https://botterino.herokuapp.com/',
-        port: port
-    },
-        updates: {
-        enabled: true,
-        get_interval: 2000
-    }
+    polling:true  
 };
 var bot = new TelegramBot(token, botOptions);
 
