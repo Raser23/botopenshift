@@ -10,11 +10,12 @@ var server=http.createServer(function(req,res){
 });
 var port=Number(process.env.PORT||3000);
 server.listen(port);
-
+var io = require('socket.io');
+var socket=io.listen(process.env.PORT||4000);
 
 
 var TelegramBot = require('node-telegram-bot-api');
-var http = require('http');
+//var http = require('http');
 var answer=require('answer');
 answer.getStick(sendStickerByBot);
 answer.getMess(sendMessageByBot);
