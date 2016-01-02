@@ -5,6 +5,7 @@ var random=require('random-number14228');
 var cool = require('cool-ascii-faces');
 
 var server=http.createServer(function(req,res){
+    console.log(req);
     res.writeHead(200,{'Content-Type':'text/html'});
     res.end('<h1>'+random()+ '</h1>');
 });
@@ -21,7 +22,7 @@ var token = '115827379:AAFaFtX7j5pFblau-xnP35dcI8VS2Ku6o9I';
 var botOptions = {
         http_proxy: {
         host: 'https://botterino.herokuapp.com/',
-        port: port,
+        port: port
     },
         updates: {
         enabled: true,
