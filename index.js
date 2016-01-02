@@ -19,6 +19,10 @@ answer.getPhoto(sendPhotoByBot);
 answer.loadCom();
 var token = '115827379:AAFaFtX7j5pFblau-xnP35dcI8VS2Ku6o9I';
 var botOptions = {
+        http_proxy: {
+        host: 'https://botterino.herokuapp.com/',
+        port: port,
+    },
         updates: {
         enabled: true,
         get_interval: 2000
