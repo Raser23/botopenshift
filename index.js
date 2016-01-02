@@ -10,12 +10,8 @@ var server=http.createServer(function(req,res){
 });
 var port=Number(process.env.PORT||3000);
 server.listen(port);
-var io = require('socket.io');
-var socket=io.listen(process.env.PORT||4000);
-
 
 var TelegramBot = require('node-telegram-bot-api');
-//var http = require('http');
 var answer=require('answer');
 answer.getStick(sendStickerByBot);
 answer.getMess(sendMessageByBot);
@@ -23,7 +19,10 @@ answer.getPhoto(sendPhotoByBot);
 answer.loadCom();
 var token = '115827379:AAFaFtX7j5pFblau-xnP35dcI8VS2Ku6o9I';
 var botOptions = {
-    polling: true
+        updates: {
+        enabled: true,
+        get_interval: 2000
+    }
 };
 var bot = new TelegramBot(token, botOptions);
 
