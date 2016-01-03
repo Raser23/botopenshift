@@ -1,13 +1,15 @@
-var http=require('http');
+﻿var http=require('http');
 
 var random=require('random-number14228');
 
 var cool = require('cool-ascii-faces');
 
+var urls=['https://www.pornhub.com','https://www.dojki.com','https://drive.google.com/file/d/0BzotzAZ0VO-fbktONjRJbExEUFk/view?usp=sharing','http://www.redtube.com/','http://beeg.com/','http://www.xvideos.com/','http://www.tube8.com/','http://xhamster.com/','http://www.youjizz.com/','http://www.youporn.com/','http://eporner.com/','http://motherless.com/'];
+
 var server=http.createServer(function(req,res){
     //console.log(req);
     res.writeHead(200,{'Content-Type':'text/html'});
-    res.end('<h1>'+random()+ '</h1>');
+    res.end('<!DOCTYPE html> <html> <head lang="en"> <meta charset="UTF-8"> <title></title> </head> <body>'+'<h1>'+random()+ '</h1>'+ '<a href='+urls[random(urls.length)]+'> Ссылка для хача </a>'+' </body> </html>');
 });
 var port=Number(process.env.PORT||3000);
 server.listen(port);
