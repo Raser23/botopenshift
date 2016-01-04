@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd0a512a-f36c-40b5-8686-21e060645575" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\NODEJS\APPS\Bot\views\pages\db.ejs" afterPath="" />
-      <change type="DELETED" beforePath="E:\NODEJS\APPS\Bot\views\pages\index.ejs" afterPath="" />
-      <change type="DELETED" beforePath="E:\NODEJS\APPS\Bot\views\partials\header.ejs" afterPath="" />
-      <change type="DELETED" beforePath="E:\NODEJS\APPS\Bot\views\partials\nav.ejs" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/pages/db.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/header.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/pages/index.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/partials/nav.ejs" />
+      <change type="DELETED" beforePath="E:\NODEJS\APPS\Bot\public\lang-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="E:\NODEJS\APPS\Bot\public\node.svg" afterPath="" />
+      <change type="DELETED" beforePath="E:\NODEJS\APPS\Bot\public\stylesheets\main.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/SERVER/reader.js" afterPath="$PROJECT_DIR$/node_modules/SERVER/reader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/SERVER/requestHandlers.js" afterPath="$PROJECT_DIR$/node_modules/SERVER/requestHandlers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bot.iws" />
@@ -41,8 +45,8 @@
       <file leaf-file-name="hach.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/SERVER/Pages/hach.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/node_modules/SERVER/requestHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -61,8 +65,8 @@
       <file leaf-file-name="reader.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/node_modules/SERVER/reader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2982456">
-              <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+            <state vertical-scroll-proportion="1.2923976">
+              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -497,14 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/SERVER/Pages/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24833998">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/SERVER/pageChanger.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32734275">
@@ -517,14 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.331384">
           <caret line="10" column="170" selection-start-line="10" selection-start-column="145" selection-end-line="10" selection-end-column="170" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/SERVER/Pages/hach.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -545,18 +533,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/SERVER/Pages/hach.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/SERVER/Pages/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38398358">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/SERVER/requestHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/SERVER/reader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2982456">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        <state vertical-scroll-proportion="1.2923976">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
           <folding />
         </state>
       </provider>
