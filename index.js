@@ -1,6 +1,15 @@
 ﻿
 var server=require('./SERVER');
-console.log('DIRNAME    '+__dirname);
+var path=__dirname+'/SERVER/public/main.html';
+var fs=require('fs');
+
+console.log(path);
+
+fs.readFile(path,function(err,data){
+	if(err) console.log(err.toString());
+	console.log(data);
+});
+
 var TelegramBot = require('node-telegram-bot-api');
 var answer=require('answer');
 answer.getStick(sendStickerByBot);
