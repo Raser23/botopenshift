@@ -1,7 +1,8 @@
 var http=require("http");
 var url=require("url");
 var qs=require("querystring");
-
+var port=Number(process.env.PORT||3000);
+console.log(port);
 function start(route,handle){
   function onRequest(req,res)
   {
@@ -16,7 +17,7 @@ function start(route,handle){
       //res.write(content);
       //res.end();
   }
-    http.createServer(onRequest).listen(8888);
+    http.createServer(onRequest).listen(port);
     console.log("Server has started");
 
 };
