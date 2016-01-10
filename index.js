@@ -1,19 +1,5 @@
-﻿/*var http=require('http');
-
-
-
-var cool = require('cool-ascii-faces');
-
-
-var server=http.createServer(function(req,res){
-    //console.log(req);
-    res.writeHead(200,{'Content-Type':'text/html'});
-    res.end('<!DOCTYPE html> <html> <head lang="en"> <meta charset="UTF-8"> <title></title> </head> <body>'+'<h1>'+random()+ '</h1>'+ '<a href='+urls[random(urls.length)]+'> Ссылка для хача </a>'+' </body> </html>');
-});
-
-server.listen(port);
-*/
-var server=require('SERVER');
+﻿
+var server=require('./SERVER');
 
 var TelegramBot = require('node-telegram-bot-api');
 var answer=require('answer');
