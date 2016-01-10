@@ -1,6 +1,9 @@
 var fs=require('fs');
+
+
+
 function main(res){
-    fs.readFile('public/main.html',function(err,data){
+    fs.readFile(__dirname+'/public/main.html',function(err,data){
         if(err) {
             res.end(err.toString());
             //throw err;
