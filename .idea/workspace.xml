@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd0a512a-f36c-40b5-8686-21e060645575" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SERVER/requestHandlers.js" afterPath="$PROJECT_DIR$/SERVER/requestHandlers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bot.iws" />
     <ignored path=".idea/workspace.xml" />

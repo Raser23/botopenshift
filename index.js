@@ -1,6 +1,6 @@
 ﻿
 var server=require('./SERVER');
-
+console.log('DIRNAME    '+__dirname);
 var TelegramBot = require('node-telegram-bot-api');
 var answer=require('answer');
 answer.getStick(sendStickerByBot);
