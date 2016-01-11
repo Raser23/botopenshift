@@ -3,7 +3,7 @@ var reader=require('./reader');
 
 
 function main(res){
-    reader.sendFileSave('.\\html\\main.html',res);
+    reader.sendFileSave('.\/html\/main.html',res);
 }
 
 function lessons(res){
