@@ -21,6 +21,7 @@ function lessons(res){
 }
 function ss(res,params){
     if(params['file']){
+        params['file'].replaceAll('\\','\/')
         reader.sendFileSave('.\/'+params['file'],res)
     }else{
         res.end('NO FILERINO');
