@@ -1,8 +1,10 @@
 var fs=require("fs");
 var path=require("path");
-var ROOT=__dirname+ '\/'  +  "public";
-console.log(ROOT);
-function sendFileSave(filePath,res) {
+var ROOT=__dirname+ '\\'  +  "public";
+var change=require('MyModules\\change').f;
+//console.log(change);
+//console.log(ROOT);
+function sendFileSave(filePath,res,changer) {
     try{
         filePath=decodeURIComponent(filePath);
     }
@@ -21,6 +23,7 @@ function sendFileSave(filePath,res) {
     }
 
     filePath=path.normalize(path.join(ROOT,filePath));
+    //console.log(filePath);
     if(filePath.indexOf(ROOT)!=0)
     {
         //console.log(228+filePath);
@@ -38,19 +41,20 @@ function sendFileSave(filePath,res) {
             res.end("File not found 2");
             return;
         }
-        sendFile(filePath,res);
+        sendFile(filePath,res,changer);
 
     })
 
 }
-function sendFile(filePath,res)
+function sendFile(filePath,res,changer)
 {
-    console.log(filePath);
+    //console.log(filePath);
     fs.readFile(filePath,function(err,content)
     {
         if(err) throw err;
-
-        res.end(content);
+        changer=changer||{};
+        changer['/ip/']=global.ip;
+        res.end(change(content.toString(),changer));
     })
 }
 
@@ -60,3 +64,5 @@ function sendFile(filePath,res)
 
 module.exports.sendFileSave=sendFileSave;
 //console.log(read(__filename));
+
+

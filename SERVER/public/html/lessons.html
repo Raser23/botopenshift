@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="lessonsApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="http:///ip//ss?file=js\angular.js"></script>
+
+    <script>
+        var model=/model/;
+        var lessonsApp=angular.module('lessonsApp',[]);
+        lessonsApp.controller("lessCtrl",function($scope){
+            $scope.lessons=model;
+            //console.log($scope.lessons);
+        })
+    </script>
+
+</head>
+<body ng-controller="lessCtrl">
+
+
+    <a ng-repeat="lesson in lessons"  href="http:///ip//ss?file=html\lessons\{{lesson}}" >{{lesson}}<br></a>
+</body>
+</html>

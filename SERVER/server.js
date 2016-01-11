@@ -11,7 +11,7 @@ function start(route,handle){
 
       var params=qs.parse( url.parse(req.url).query);
 
-      console.log("Request for "+pathname+" received");
+      //console.log("Request for "+pathname+" received");
       route(handle,pathname,res,params);
       //res.write(content);
       //res.end();
