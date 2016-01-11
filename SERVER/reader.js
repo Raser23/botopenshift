@@ -1,7 +1,7 @@
 var fs=require("fs");
 var path=require("path");
 var ROOT=__dirname+ '\\'  +  "public";
-var change=require('MyModules\\change').f;
+var change=require('MyModules/change').f;
 //console.log(change);
 //console.log(ROOT);
 function sendFileSave(filePath,res,changer) {
