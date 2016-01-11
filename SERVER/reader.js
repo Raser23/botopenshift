@@ -1,6 +1,6 @@
 var fs=require("fs");
 var path=require("path");
-var ROOT=__dirname+ '\\'  +  "public";
+var ROOT=__dirname+ '\/'  +  "public";
 console.log(ROOT);
 function sendFileSave(filePath,res) {
     try{
