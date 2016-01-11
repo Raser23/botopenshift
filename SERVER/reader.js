@@ -21,13 +21,11 @@ function sendFileSave(filePath,res) {
     }
 
     filePath=path.normalize(path.join(ROOT,filePath));
-   // console.log(filePath);
-    //console.log(ROOT);
     if(filePath.indexOf(ROOT)!=0)
     {
         //console.log(228+filePath);
         res.statusCode=400;
-        res.end("File not found");
+        res.end("File not found 1");
         return;
     }
 
@@ -35,9 +33,9 @@ function sendFileSave(filePath,res) {
     {
         if(err||!stats.isFile())
         {
-          //  console.log(1);
+            console.log(err);
             res.statusCode=400;
-            res.end("File not found");
+            res.end("File not found 2");
             return;
         }
         sendFile(filePath,res);
@@ -47,7 +45,7 @@ function sendFileSave(filePath,res) {
 }
 function sendFile(filePath,res)
 {
-
+    console.log(filePath);
     fs.readFile(filePath,function(err,content)
     {
         if(err) throw err;
@@ -55,6 +53,10 @@ function sendFile(filePath,res)
         res.end(content);
     })
 }
+
+
+
+
 
 module.exports.sendFileSave=sendFileSave;
 //console.log(read(__filename));
