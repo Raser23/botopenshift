@@ -23,7 +23,7 @@ function sendFileSave(filePath,res,changer) {
     }
 
     filePath=path.normalize(path.join(ROOT,filePath));
-    //console.log(filePath);
+    console.log(filePath);
     if(filePath.indexOf(ROOT)!=0)
     {
         //console.log(228+filePath);
