@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd0a512a-f36c-40b5-8686-21e060645575" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SERVER/requestHandlers.js" afterPath="$PROJECT_DIR$/SERVER/requestHandlers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SERVER/reader.js" afterPath="$PROJECT_DIR$/SERVER/reader.js" />
     </list>
     <ignored path="Bot.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,20 +63,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reader.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="reader.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SERVER/reader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0436457">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requestHandlers.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="requestHandlers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SERVER/requestHandlers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10911425">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
               <folding />
             </state>
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/SERVER/public/html/lessons/test6.html" />
         <option value="$PROJECT_DIR$/SERVER/router.js" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/SERVER/reader.js" />
         <option value="$PROJECT_DIR$/SERVER/requestHandlers.js" />
+        <option value="$PROJECT_DIR$/SERVER/reader.js" />
       </list>
     </option>
   </component>
@@ -357,7 +357,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1554" height="916" extended-state="6" />
+    <frame x="-8" y="-8" width="1554" height="916" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20416124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -761,18 +761,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SERVER/reader.js">
+    <entry file="file://$PROJECT_DIR$/SERVER/requestHandlers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SERVER/requestHandlers.js">
+    <entry file="file://$PROJECT_DIR$/SERVER/reader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10911425">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0436457">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding />
         </state>
       </provider>
