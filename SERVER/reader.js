@@ -51,6 +51,7 @@ function sendFile(filePath,res,changer)
     //console.log(filePath);
     fs.readFile(filePath,function(err,content)
     {
+        filePath=change({"\\":"/"})
         if(err) throw err;
         changer=changer||{};
         changer['/ip/']=global.ip;
