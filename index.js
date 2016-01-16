@@ -1,12 +1,13 @@
 ﻿var server=require('./SERVER');
-global.ip='botterino.herokuapp.com';
+global.ip='https://botterino.heroku.com';
+
 var TelegramBot = require('node-telegram-bot-api');
 var answer=require('answer');
 answer.getStick(sendStickerByBot);
 answer.getMess(sendMessageByBot);
 answer.getPhoto(sendPhotoByBot);
 answer.loadCom();
-var token = '115827379:AAFaFtX7j5pFblau-xnP35dcI8VS2Ku6o9I';
+var token = '142893106:AAE9SE9xTcmXtS0QEOvzoMrrzcqAT-8H_HA';
 var botOptions = {
     polling:true  
 };
@@ -19,12 +20,12 @@ bot.getMe().then(function(me) {
 });
 
 bot.on('text', function(msg) {
+   // console.log(msg);
     var messageChatId = msg.chat.id;
     var messageText = msg.text;
     var messageDate = msg.date;
     var messageUsr = msg.from.username;
     answer.ans(messageChatId,messageText,messageDate,messageUsr);
-
 });
 bot.on('sticker', function(msg) {
     var messageChatId = msg.chat.id;
@@ -35,7 +36,6 @@ bot.on('sticker', function(msg) {
 });
 
 function sendMessageByBot(aChatId, aMessage,opts) {
-    //console.log(aMessage);
     opts=opts|| { caption: 'I\'m a cute bot!' };
     //console.log(opts);
     if(aMessage)

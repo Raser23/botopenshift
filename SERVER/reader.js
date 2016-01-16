@@ -24,14 +24,6 @@ function sendFileSave(filePath,res,changer) {
 
     filePath=path.normalize(path.join(ROOT,filePath));
     console.log(filePath);
-    if(filePath.indexOf(ROOT)!=0)
-    {
-        //console.log(228+filePath);
-        res.statusCode=400;
-        res.end("File not found 1");
-        return;
-    }
-
     fs.stat(filePath,function(err,stats)
     {
         if(err||!stats.isFile())

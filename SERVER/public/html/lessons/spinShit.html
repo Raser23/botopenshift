@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+    <canvas id='canv' width="500" height="500">Обновите браузер</canvas>
+</body>
+<script>
+    function clearCanv(canvas){
+        var ct=canvas.getContext('2d');
+        ct.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    var canvas = document.getElementById("canv"),
+            ctx     =canvas.getContext('2d');
+    function draw(ctx,center){
+        ctx.beginPath();
+        ctx.arc(center.x, center.y, center.rad, -center.angStart * Math.PI, -center.angEnd * Math.PI, true);
+        ctx.lineTo(center.x + center.podRad*Math.cos(center.angEnd*Math.PI), center.y - center.podRad*Math.sin(center.angEnd*Math.PI));
+        ctx.moveTo(center.x + center.podRad*Math.cos(center.angStart*Math.PI), center.y - center.podRad*Math.sin(center.angStart*Math.PI));
+        ctx.arc(center.x, center.y, center.podRad, -center.angStart * Math.PI, -center.angEnd * Math.PI, true);
+        ctx.moveTo(center.x + center.podRad*Math.cos(center.angStart*Math.PI), center.y - center.podRad*Math.sin(center.angStart*Math.PI));
+        ctx.lineTo( center.x+ Math.cos(center.angStart*Math.PI)*center.rad    , center.y - Math.sin(center.angStart*Math.PI)*center.rad);
+        ctx.stroke();
+
+    }
+    function ceneter(x,y,rad1,rad2,startAng,endAng,b1,b2){
+        this.x=x;
+        this.y=y;
+        this.rad=rad1;
+        this.podRad=rad2;
+        this.angStart=startAng;
+        this.angEnd=endAng;
+        this.b1=b1||false;
+        this.b2=b2||false;
+    }
+    var k=0;
+    function a(){
+        clearCanv(canvas);
+        draw(ctx,new ceneter(200,200,200,100,0+k,1/2+k));
+        draw(ctx,new ceneter(200,200,200,100,1+k,3/2+k));
+        k+=0.03;
+    }
+    setInterval(a,1000/30);
+    ctx.stroke(); // *22
+</script>
+</html>

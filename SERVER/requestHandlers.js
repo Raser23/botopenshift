@@ -20,6 +20,7 @@ function lessons(res){
     });
 }
 function ss(res,params){
+
     if(params['file']){
         //params['file']=params['file'].toString().replaceAll('\\','\/');
         reader.sendFileSave('.\/'+params['file'],res)
@@ -27,7 +28,10 @@ function ss(res,params){
         res.end('NO FILERINO');
     }
 }
-
+function minecraft(res){
+    reader.sendFileSave('.\/html\/minecraft.html',res);
+}
 exports.ss=ss;
 exports.lessons=lessons;
 exports.main=main;
+exports.minecraft=minecraft;

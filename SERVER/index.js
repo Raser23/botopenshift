@@ -7,4 +7,5 @@ var handle={};
 handle['/']=requestHandlers.main;
 handle['/lessons']=requestHandlers.lessons;
 handle['/ss']=requestHandlers.ss;
+handle['/minecraft']=requestHandlers.minecraft;
 server.start(router.route,handle);
