@@ -3,7 +3,7 @@ var reader=require('./reader');
 
 
 function main(res){
-    reader.sendFileSave('.\/html\/main.html',res);
+    reader.sendFileSave('.\/test\/index.html',res);
 }
 
 function lessons(res){
@@ -23,6 +23,7 @@ function ss(res,params){
 
     if(params['file']){
         //params['file']=params['file'].toString().replaceAll('\\','\/');
+        console.log("Need File: "+params["file"]);
         reader.sendFileSave('.\/'+params['file'],res)
     }else{
         res.end('NO FILERINO');

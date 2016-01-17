@@ -38,22 +38,19 @@ function sendFileSave(filePath,res,changer) {
     })
 
 }
-function sendFile(filePath,res,changer)
-{
-    //console.log(filePath);
+function sendFile(filePath,res,changer) {
+    console.log("FilePath:" +filePath);
     fs.readFile(filePath,function(err,content)
     {
         filePath=change({"\\":"/"})
         if(err) throw err;
         changer=changer||{};
+        //E:\NODEJS\APPS\Bot\SERVER\reader.js
         changer['/ip/']=global.ip;
+        changer['/ssip/']=global.ssIp;
         res.end(change(content.toString(),changer));
     })
 }
-
-
-
-
 
 module.exports.sendFileSave=sendFileSave;
 //console.log(read(__filename));

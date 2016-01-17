@@ -1,5 +1,6 @@
 ﻿var server=require('./SERVER');
-global.ip='botterino.heroku.com';
+global.ip='https://botterino.herokuapp.com/';
+global.ssIp="https://staterinoserverino.herokuapp.com";
 
 var TelegramBot = require('node-telegram-bot-api');
 var answer=require('answer');

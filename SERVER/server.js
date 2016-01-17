@@ -5,8 +5,9 @@ var port=Number(process.env.PORT||3000);
 function start(route,handle){
   function onRequest(req,res)
   {
-    //var ip=req._remoteAddress;
+      //var ip=req._remoteAddress;
      // console.log(ip);
+      console.log(req.url);
       var pathname=url.parse(req.url).pathname;
 
       var params=qs.parse( url.parse(req.url).query);
