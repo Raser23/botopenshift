@@ -67,7 +67,7 @@ var TelegramBot = require('node-telegram-bot-api');
 var token = '142893106:AAE9SE9xTcmXtS0QEOvzoMrrzcqAT-8H_HA';
 // See https://developers.openshift.com/en/node-js-environment-variables.html
 var port = process.env.PORT||3000;
-var host= process.env.HOST||'0.0.0.0';
+var host= 'botterino.herokuapp.com/';
 //var host = "https://botterino.herokuapp.com/";
 var domain =host+"/" + token;
 console.log(domain);
