@@ -64,15 +64,22 @@ function sendPhotoByBot(aChatId,photo){
 // An example for OpenShift platform.
 var TelegramBot = require('node-telegram-bot-api');
 
-var token = 'YOUR_TELEGRAM_BOT_TOKEN';
+var token = '142893106:AAE9SE9xTcmXtS0QEOvzoMrrzcqAT-8H_HA';
 // See https://developers.openshift.com/en/node-js-environment-variables.html
 var port = process.env.PORT||3000;
 var host = "https://botterino.herokuapp.com";
 var domain =host+"/" + token;
 
-var bot = new TelegramBot(token, {webHook: {host: host}});
-// OpenShift enroutes :443 request to OPENSHIFT_NODEJS_PORT
-bot.setWebHook(domain+':443/bot'+token);
+var bot = new TelegramBot(token, {webHook:true});
+bot.setWebHook(domain);
+
+bot.getMe().then(function(me) {
+    console.log('Hello! My name is %s!', me.first_name);
+    console.log('AMA WEBHOOK BOT');
+    console.log('My id is %s.', me.id);
+    console.log('And my username is @%s.', me.username);
+});
+
 bot.on('message', function (msg) {
     var chatId = msg.chat.id;
     bot.sendMessage(chatId, "I'm alive!");
