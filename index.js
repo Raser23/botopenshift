@@ -1,4 +1,10 @@
-﻿var server=require('./SERVER');
+﻿/*var botOptions = {
+ polling:true
+ };
+ var bot = new TelegramBot(token, botOptions);
+ */
+/*
+var server=require('./SERVER');
 global.ip='https://botterino.herokuapp.com/';
 global.ssIp="https://staterinoserverino.herokuapp.com";
 
@@ -10,17 +16,13 @@ answer.getMess(sendMessageByBot);
 answer.getPhoto(sendPhotoByBot);
 answer.loadCom();
 var token = '142893106:AAE9SE9xTcmXtS0QEOvzoMrrzcqAT-8H_HA';
-/*var botOptions = {
-    polling:true  
-};
-var bot = new TelegramBot(token, botOptions);
-*/
+
 
 var port = process.env.PORT||3000;
 var host = "https://botterino.herokuapp.com";
 var domain =host+"/" + token;
 
-var bot = new TelegramBot(token/*, {webHook: {port: port, host: host}}*/);
+var bot = new TelegramBot(token);
 global.bot=bot;
 console.log(domain);
 bot.setWebHook(domain);
@@ -58,4 +60,20 @@ function sendStickerByBot(aChatId, aStickerId) {
 }
 function sendPhotoByBot(aChatId,photo){
     bot.sendPhoto(aChatId, photo, { caption: 'Image:' });
-}
+}*/
+// An example for OpenShift platform.
+var TelegramBot = require('node-telegram-bot-api');
+
+var token = 'YOUR_TELEGRAM_BOT_TOKEN';
+// See https://developers.openshift.com/en/node-js-environment-variables.html
+var port = process.env.PORT||3000;
+var host = "https://botterino.herokuapp.com";
+var domain =host+"/" + token;
+
+var bot = new TelegramBot(token, {webHook: {host: host}});
+// OpenShift enroutes :443 request to OPENSHIFT_NODEJS_PORT
+bot.setWebHook(domain+':443/bot'+token);
+bot.on('message', function (msg) {
+    var chatId = msg.chat.id;
+    bot.sendMessage(chatId, "I'm alive!");
+});
