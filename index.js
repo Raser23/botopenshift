@@ -17,11 +17,12 @@ var bot = new TelegramBot(token, botOptions);
 */
 
 var port = process.env.PORT||3000;
-var host = "http://botterino.herokuapp.com/";
-var domain ="";
+var host = "http://botterino.herokuapp.com";
+var domain =host+":"+port+"/" + token;
 
 var bot = new TelegramBot(token/*, {webHook: {port: port, host: host}}*/);
-bot.setWebHook(host + token);
+console.log(domain);
+bot.setWebHook(domain);
 bot.getMe().then(function(me) {
     console.log('Hello! My name is %s!', me.first_name);
     console.log('AMA WEBHOOK BOT');
