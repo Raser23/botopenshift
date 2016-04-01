@@ -9,11 +9,19 @@ answer.getMess(sendMessageByBot);
 answer.getPhoto(sendPhotoByBot);
 answer.loadCom();
 var token = '142893106:AAE9SE9xTcmXtS0QEOvzoMrrzcqAT-8H_HA';
-var botOptions = {
+/*var botOptions = {
     polling:true  
 };
-var bot = new TelegramBot(token, botOptions);
 
+var bot = new TelegramBot(token, botOptions);
+*/
+
+var port = process.env.PORT||3000;
+var host = "http://botterino.herokuapp.com/";
+var domain ="";
+
+var bot = new TelegramBot(token/*, {webHook: {port: port, host: host}}*/);
+bot.setWebHook(host + token);
 bot.getMe().then(function(me) {
     console.log('Hello! My name is %s!', me.first_name);
     console.log('My id is %s.', me.id);
