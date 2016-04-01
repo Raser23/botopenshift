@@ -2,6 +2,7 @@
 global.ip='https://botterino.herokuapp.com/';
 global.ssIp="https://staterinoserverino.herokuapp.com";
 
+
 var TelegramBot = require('node-telegram-bot-api');
 var answer=require('answer');
 answer.getStick(sendStickerByBot);
@@ -12,7 +13,6 @@ var token = '142893106:AAE9SE9xTcmXtS0QEOvzoMrrzcqAT-8H_HA';
 /*var botOptions = {
     polling:true  
 };
-
 var bot = new TelegramBot(token, botOptions);
 */
 
@@ -21,6 +21,7 @@ var host = "https://botterino.herokuapp.com";
 var domain =host+"/" + token;
 
 var bot = new TelegramBot(token/*, {webHook: {port: port, host: host}}*/);
+global.bot=bot;
 console.log(domain);
 bot.setWebHook(domain,token);
 bot.getMe().then(function(me) {

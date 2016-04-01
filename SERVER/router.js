@@ -7,6 +7,7 @@ var route=function(handle,pathname,res,params)
     }
     else {
         console.log("No request handler founf for " + pathname);
+        console.log(params);
         res.write( "404! Not Found");
         res.end();
     }
