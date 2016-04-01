@@ -22,7 +22,7 @@ var domain =host+"/" + token;
 
 var bot = new TelegramBot(token/*, {webHook: {port: port, host: host}}*/);
 console.log(domain);
-bot.setWebHook(domain);
+bot.setWebHook(domain,token);
 bot.getMe().then(function(me) {
     console.log('Hello! My name is %s!', me.first_name);
     console.log('AMA WEBHOOK BOT');
