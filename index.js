@@ -18,7 +18,7 @@ var bot = new TelegramBot(token, botOptions);
 
 var port = process.env.PORT||3000;
 var host = "http://botterino.herokuapp.com";
-var domain =host+":"+port+"/" + token;
+var domain =host+"/" + token;
 
 var bot = new TelegramBot(token/*, {webHook: {port: port, host: host}}*/);
 console.log(domain);
