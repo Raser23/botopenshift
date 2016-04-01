@@ -71,7 +71,7 @@ var host= 'botterino.herokuapp.com';
 //var host = "https://botterino.herokuapp.com/";
 var domain ="https://"+host+"/" + token;
 console.log(domain);
-var bot = new TelegramBot(token, {webHook: {host: host}});
+var bot = new TelegramBot(token, {webHook: true});
 bot.getMe().then(function(me) {
     console.log('Hello! My name is %s!', me.first_name);
 
