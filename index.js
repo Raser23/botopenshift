@@ -74,9 +74,7 @@ console.log(domain);
 var bot = new TelegramBot(token, {webHook: {host: host,port:port}});
 bot.getMe().then(function(me) {
     console.log('Hello! My name is %s!', me.first_name);
-    console.log('AMA WEBHOOK BOT');
-    console.log('My id is %s.', me.id);
-    console.log('And my username is @%s.', me.username);
+
 });
 bot.setWebHook(host+"/"+token);
 bot.on('message', function (msg) {
